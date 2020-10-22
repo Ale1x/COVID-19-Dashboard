@@ -25,21 +25,21 @@ const IndexPage = () => {
   const dashboardStats = [
     {
       primary: {
-        label: 'Total Cases',
+        label: 'Casi totali',
         value: stats ? stats?.cases.toLocaleString( 'it-IT' ) : '-'
       },
       secondary: {
-        label: 'Per 1 Million',
+        label: '/ Milione',
         value: stats ? stats?.casesPerOneMillion.toLocaleString( 'it-IT' ) : '-'
       }
     },
     {
       primary: {
-        label: 'Total Deaths',
+        label: 'Morti totali',
         value: stats ? stats?.deaths.toLocaleString( 'it-IT' ) : '-'
       },
       secondary: {
-        label: 'Per 1 Million',
+        label: '/ Milione',
         value: stats ? stats?.deathsPerOneMillion.toLocaleString( 'it-IT' ) : '-'
       }
     },
@@ -55,7 +55,7 @@ const IndexPage = () => {
     },
     {
       primary: {
-        label: 'Active Cases',
+        label: 'Casi Attivi',
         value: stats ? stats?.active.toLocaleString( 'it-IT' ) : '-'
       }
       // secondary: {
@@ -65,7 +65,7 @@ const IndexPage = () => {
     },
     {
       primary: {
-        label: 'Critical Cases',
+        label: 'Casi critici',
         value: stats ? stats?.critical.toLocaleString( 'it-IT' ) : '-'
       }
       // secondary: {
@@ -75,7 +75,7 @@ const IndexPage = () => {
     },
     {
       primary: {
-        label: 'Recovered Cases',
+        label: 'Casi ricoverati',
         value: stats ? stats?.recovered.toLocaleString( 'it-IT' ) : '-'
       }
       // secondary: {
@@ -141,10 +141,10 @@ const IndexPage = () => {
                         <span class="icon-marker-tooltip">
                         <h2>${country}</h2>
                         <ul>
-                            <li><strong>Confirmed:</strong> ${cases.toLocaleString( 'it-IT' )}</li>
-                            <li><strong>Deaths:</strong> ${deaths.toLocaleString( 'it-IT' )}</li>
-                            <li><strong>Recovered:</strong> ${recovered.toLocaleString( 'it-IT' )}</li>
-                            <!-- <li><strong>Last Update:</strong> ${updatedFormatted}</li> -->
+                            <li><strong>Confermati:</strong> ${cases.toLocaleString( 'it-IT' )}</li>
+                            <li><strong>Morti:</strong> ${deaths.toLocaleString( 'it-IT' )}</li>
+                            <li><strong>Ricoverati:</strong> ${recovered.toLocaleString( 'it-IT' )}</li>
+                            <!-- <li><strong>Ultimo aggiornamento:</strong> ${updatedFormatted}</li> -->
                         </ul>
                         </span>
                         ${casesString}
@@ -174,7 +174,7 @@ const IndexPage = () => {
   return (
     <Layout pageName="home">
       <Helmet>
-        <title>COVID-19 Dashboard</title>
+        <title>Mappa COVID-19</title>
       </Helmet>
 
       <div className="tracker">
@@ -202,7 +202,7 @@ const IndexPage = () => {
           </ul>
         </div>
         <div className="tracker-last-updated">
-          <p>Last Updated: { stats ? new Date( stats?.updated ).toLocaleString( 'it-IT' ) : '-' }</p>
+          <p>Ultimo Aggiornamento { stats ? new Date( stats?.updated ).toLocaleString( 'it-IT' ) : '-' }</p>
         </div>
       </div>
     </Layout>
