@@ -1,13 +1,13 @@
 export function promiseToFlyTo( map, { zoom, center }) {
   return new Promise(( resolve, reject ) => {
-    const baseError = 'Failed to fly to area';
+    const baseError = 'Non riesco ad andare sopra!';
 
     if ( !map.flyTo ) {
-      reject( `${baseError}: no flyTo method on map` );
+      reject( `${baseError}: metodo no flyTo sulla mappa` );
     }
 
     if ( typeof zoom !== 'number' ) {
-      reject( `${baseError}: zoom invalid number ${zoom}` );
+      reject( `${baseError}: Numero zoom invalido ${zoom}` );
     }
 
     const mapCenter = center || map.getCenter();
