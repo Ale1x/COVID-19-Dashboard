@@ -26,61 +26,61 @@ const IndexPage = () => {
     {
       primary: {
         label: 'Total Cases',
-        value: stats ? stats?.cases.toLocaleString( 'en-US' ) : '-'
+        value: stats ? stats?.cases.toLocaleString( 'it-IT' ) : '-'
       },
       secondary: {
         label: 'Per 1 Million',
-        value: stats ? stats?.casesPerOneMillion.toLocaleString( 'en-US' ) : '-'
+        value: stats ? stats?.casesPerOneMillion.toLocaleString( 'it-IT' ) : '-'
       }
     },
     {
       primary: {
         label: 'Total Deaths',
-        value: stats ? stats?.deaths.toLocaleString( 'en-US' ) : '-'
+        value: stats ? stats?.deaths.toLocaleString( 'it-IT' ) : '-'
       },
       secondary: {
         label: 'Per 1 Million',
-        value: stats ? stats?.deathsPerOneMillion.toLocaleString( 'en-US' ) : '-'
+        value: stats ? stats?.deathsPerOneMillion.toLocaleString( 'it-IT' ) : '-'
       }
     },
     {
       primary: {
         label: 'Total Tests',
-        value: stats ? stats?.tests.toLocaleString( 'en-US' ) : '-'
+        value: stats ? stats?.tests.toLocaleString( 'it-IT' ) : '-'
       },
       secondary: {
         label: 'Per 1 Million',
-        value: stats ? stats?.testsPerOneMillion.toLocaleString( 'en-US' ) : '-'
+        value: stats ? stats?.testsPerOneMillion.toLocaleString( 'it-IT' ) : '-'
       }
     },
     {
       primary: {
         label: 'Active Cases',
-        value: stats ? stats?.active.toLocaleString( 'en-US' ) : '-'
+        value: stats ? stats?.active.toLocaleString( 'it-IT' ) : '-'
       }
       // secondary: {
       //     label: 'Per 1 Million',
-      //     value: stats ? stats?.activePerOneMillion.toLocaleString( 'en-US' ) : '-',
+      //     value: stats ? stats?.activePerOneMillion.toLocaleString( 'it-IT' ) : '-',
       // },
     },
     {
       primary: {
         label: 'Critical Cases',
-        value: stats ? stats?.critical.toLocaleString( 'en-US' ) : '-'
+        value: stats ? stats?.critical.toLocaleString( 'it-IT' ) : '-'
       }
       // secondary: {
       //     label: 'Per 1 Million',
-      //     value: stats ? stats?.criticalPerOneMillion.toLocaleString( 'en-US' ) : '-',
+      //     value: stats ? stats?.criticalPerOneMillion.toLocaleString( 'it-IT' ) : '-',
       // },
     },
     {
       primary: {
         label: 'Recovered Cases',
-        value: stats ? stats?.recovered.toLocaleString( 'en-US' ) : '-'
+        value: stats ? stats?.recovered.toLocaleString( 'it-IT' ) : '-'
       }
       // secondary: {
       //     label: 'Per 1 Million',
-      //     value: stats ? stats?.recoveredPerOneMillion.toLocaleString( 'en-US' ) : '-',
+      //     value: stats ? stats?.recoveredPerOneMillion.toLocaleString( 'it-IT' ) : '-',
       // },
     }
   ];
@@ -141,9 +141,9 @@ const IndexPage = () => {
                         <span class="icon-marker-tooltip">
                         <h2>${country}</h2>
                         <ul>
-                            <li><strong>Confirmed:</strong> ${cases.toLocaleString( 'en-US' )}</li>
-                            <li><strong>Deaths:</strong> ${deaths.toLocaleString( 'en-US' )}</li>
-                            <li><strong>Recovered:</strong> ${recovered.toLocaleString( 'en-US' )}</li>
+                            <li><strong>Confirmed:</strong> ${cases.toLocaleString( 'it-IT' )}</li>
+                            <li><strong>Deaths:</strong> ${deaths.toLocaleString( 'it-IT' )}</li>
+                            <li><strong>Recovered:</strong> ${recovered.toLocaleString( 'it-IT' )}</li>
                             <!-- <li><strong>Last Update:</strong> ${updatedFormatted}</li> -->
                         </ul>
                         </span>
@@ -202,7 +202,7 @@ const IndexPage = () => {
           </ul>
         </div>
         <div className="tracker-last-updated">
-          <p>Last Updated: { stats ? new Date( stats?.updated ).toLocaleString( 'en-us' ) : '-' }</p>
+          <p>Last Updated: { stats ? new Date( stats?.updated ).toLocaleString( 'it-IT' ) : '-' }</p>
         </div>
       </div>
     </Layout>
