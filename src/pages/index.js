@@ -45,11 +45,11 @@ const IndexPage = () => {
     },
     {
       primary: {
-        label: 'Total Tests',
+        label: 'Tamponi totali',
         value: stats ? stats?.tests.toLocaleString( 'it-IT' ) : '-'
       },
       secondary: {
-        label: 'Per 1 Million',
+        label: '/ Milione',
         value: stats ? stats?.testsPerOneMillion.toLocaleString( 'it-IT' ) : '-'
       }
     },
